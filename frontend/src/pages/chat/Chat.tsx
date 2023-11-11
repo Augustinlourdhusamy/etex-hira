@@ -9,7 +9,7 @@ import uuid from 'react-uuid';
 import { isEmpty } from "lodash-es";
 
 import styles from "./Chat.module.css";
-import Azure from "../../assets/Azure.svg";
+import Azure from "../../assets/etex-logo-r2.webp";
 
 import {
     ChatMessage,
@@ -579,9 +579,10 @@ const Chat = () => {
                                     src={Azure}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
+                                    width="100"
                                 />
                                 <h1 className={styles.chatEmptyStateTitle}>Next - Gen AI Chit-Chat</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h2 className={styles.chatEmptyStateSubtitle}>Chat smarter with our AI-- Where every word sparks a world of intelligence </h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
