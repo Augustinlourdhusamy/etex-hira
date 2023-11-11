@@ -579,10 +579,10 @@ const Chat = () => {
                                     src={Azure}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
-                                    width="100"
+                                    width="150"
                                 />
-                                <h1 className={styles.chatEmptyStateTitle}>Next - Gen AI Chit-Chat</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>Chat smarter with our AI-- Where every word sparks a world of intelligence </h2>
+                                <h1 className={styles.chatEmptyStateTitle}>"Next - Gen AI Chit-Chat"</h1>
+                                <h2 className={styles.chatEmptyStateSubtitle}>"Chat smarter with our AI-- Where every word sparks a world of intelligence" </h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
@@ -643,7 +643,7 @@ const Chat = () => {
                                         <span className={styles.stopGeneratingText} aria-hidden="true">Stop generating</span>
                                 </Stack>
                             )}
-                            <Stack>
+                            {/* <Stack>
                                 {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured && <CommandBarButton
                                     role="button"
                                     styles={{ 
@@ -689,7 +689,7 @@ const Chat = () => {
                                     modalProps={modalProps}
                                 >
                                 </Dialog>
-                            </Stack>
+                            </Stack> */}
                             <QuestionInput
                                 clearOnSend
                                 placeholder="Type a new question..."

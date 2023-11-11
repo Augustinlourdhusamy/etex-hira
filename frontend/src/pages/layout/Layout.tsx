@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import Azure from "../../assets/Azure.svg";
+import Azure from "../../assets/etex-logo-r2.webp";
 import { CopyRegular, ShareRegular } from "@fluentui/react-icons";
 import { CommandBarButton, Dialog, Stack, TextField, ICommandBarStyles, IButtonStyles, DefaultButton  } from "@fluentui/react";
 import { useContext, useEffect, useState } from "react";
@@ -77,16 +77,17 @@ const Layout = () => {
                             src={Azure}
                             className={styles.headerIcon}
                             aria-hidden="true"
+                            width="100"
                         />
-                        <Link to="/" className={styles.headerTitleContainer}>
-                            <h1 className={styles.headerTitle}>Azure AI</h1>
-                        </Link>
+                        {/* <Link to="/" className={styles.headerTitleContainer}>
+                            <h1 className={styles.headerTitle}></h1>
+                        </Link> */}
                     </Stack>
                     <Stack horizontal tokens={{ childrenGap: 4 }}>
-                            {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && 
+                            {/* {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && 
                                 <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"}/>    
-                            }
-                            <ShareButton onClick={handleShareClick} />
+                            } */}
+                            <div className={styles.shareLinkContainer}><ShareButton onClick={handleShareClick} /></div>          
                     </Stack>
 
                 </Stack>
