@@ -556,7 +556,7 @@ const Chat = () => {
 
     return (
         <div className={styles.container} role="main">
-            {/* {showAuthMessage ? (
+             {showAuthMessage ? (
                 <Stack className={styles.chatEmptyState}>
                     <ShieldLockRegular className={styles.chatIcon} style={{color: 'darkorange', height: "200px", width: "200px"}}/>
                     <h1 className={styles.chatEmptyStateTitle}>Authentication Not Configured</h1>
@@ -569,10 +569,10 @@ const Chat = () => {
                     <h2 className={styles.chatEmptyStateSubtitle} style={{fontSize: "20px"}}><strong>Authentication configuration takes a few minutes to apply. </strong></h2>
                     <h2 className={styles.chatEmptyStateSubtitle} style={{fontSize: "20px"}}><strong>If you deployed in the last 10 minutes, please wait and reload the page after 10 minutes.</strong></h2>
                 </Stack>
-            ) : */
+            ) : 
              (
                 <Stack horizontal className={styles.chatRoot}>
-                    <div className={styles.chatContainer}>
+                    <div className={styles.chatContainer} >
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
