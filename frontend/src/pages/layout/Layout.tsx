@@ -67,31 +67,32 @@ const Layout = () => {
     useEffect(() => {}, [appStateContext?.state.isCosmosDBAvailable.status]);
 
     return (
-        <div className={styles.layout}>
-            <header className={styles.header} role={"banner"}>
-                <Stack horizontal verticalAlign="center" horizontalAlign="space-between"
-                // className={styles.headerContainer}
-                >
-                    <Stack horizontal verticalAlign="center">
+        <div>
+        {/* // className={styles.layout} */}
+            {/* /<header className={styles.header} role={"banner"}> */}
+                {/* <Stack horizontal verticalAlign="center" horizontalAlign="space-between" */}
+                 {/* className={styles.headerContainer} */}
+                {/* > */}
+                    {/* <Stack horizontal verticalAlign="center">
                         <img
                             src={Azure}
                             className={styles.headerIcon}
                             aria-hidden="true"
                             width="100"
-                        />
+                        /> */}
                         {/* <Link to="/" className={styles.headerTitleContainer}>
                             <h1 className={styles.headerTitle}></h1>
                         </Link> */}
-                    </Stack>
-                    <Stack horizontal tokens={{ childrenGap: 4 }}>
+                    {/* </Stack>
+                    <Stack horizontal tokens={{ childrenGap: 4 }}> */}
                             {/* {(appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && 
                                 <HistoryButton onClick={handleHistoryClick} text={appStateContext?.state?.isChatHistoryOpen ? "Hide chat history" : "Show chat history"}/>    
                             } */}
-                            <div className={styles.shareLinkContainer}><ShareButton onClick={handleShareClick} /></div>          
-                    </Stack>
+                            {/* <div className={styles.shareLinkContainer}><ShareButton onClick={handleShareClick} /></div>          
+                    </Stack> */}
 
-                </Stack>
-            </header>
+                {/* </Stack>
+            </header> */}
             <Outlet />
             <Dialog 
                 onDismiss={handleSharePanelDismiss}

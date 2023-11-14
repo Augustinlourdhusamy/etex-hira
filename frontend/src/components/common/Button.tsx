@@ -23,7 +23,7 @@ export const ShareButton: React.FC<ShareButtonProps> = ({onClick}) => {
         rootHovered: {
           // background: 'linear-gradient(135deg, #0F6CBD 0%, #2D87C3 51.04%, #8DDDD8 100%)',
           background: '#d65501',
-          color: '#d65501'
+          color: '#fffff'
         },
         label: {
           fontWeight: 600,
