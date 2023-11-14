@@ -659,19 +659,19 @@ const Chat = () => {
                     )}
 
                     <Stack horizontal className={styles.chatInput}>
-                        {isLoading && (
-                            <Stack 
-                                horizontal
-                                className={styles.stopGeneratingContainer}
-                                role="button"
-                                aria-label="Stop generating"
-                                tabIndex={0}
-                                onClick={stopGenerating}
-                                onKeyDown={e => e.key === "Enter" || e.key === " " ? stopGenerating() : null}
-                                >
-                                    <SquareRegular className={styles.stopGeneratingIcon} aria-hidden="true"/>
-                                    <span className={styles.stopGeneratingText} aria-hidden="true">Stop generating</span>
-                            </Stack>
+                        {isLoading && ( ''
+                            // <Stack 
+                            //     horizontal
+                            //     className={styles.stopGeneratingContainer}
+                            //     role="button"
+                            //     aria-label="Stop generating"
+                            //     tabIndex={0}
+                            //     onClick={stopGenerating}
+                            //     onKeyDown={e => e.key === "Enter" || e.key === " " ? stopGenerating() : null}
+                            //     >
+                            //         <SquareRegular className={styles.stopGeneratingIcon} aria-hidden="true"/>
+                            //         <span className={styles.stopGeneratingText} aria-hidden="true">Stop generating</span>
+                            // </Stack>
                         )}
                         {/* <Stack>
                             {appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured && <CommandBarButton
@@ -755,7 +755,8 @@ const Chat = () => {
                 )}
                 {(appStateContext?.state.isChatHistoryOpen && appStateContext?.state.isCosmosDBAvailable?.status !== CosmosDBStatus.NotConfigured) && <ChatHistoryPanel/>}
                 </Stack>
-             )}
+             )
+             }
         </div>
     );
 };
