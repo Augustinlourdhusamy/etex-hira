@@ -55,3 +55,31 @@
     width: 27px;
     height: 30px;
 }
+
+.goBtn {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #F06D0C;
+    color:  #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    line-height: 22px; /* 91.667% */
+}
+.formControl {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid  #EFEFEF;
+    background: #FFF;
+    padding: 10px 30px 10px 15px;
+    width: 100%;
+}

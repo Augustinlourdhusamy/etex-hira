@@ -10,9 +10,10 @@ interface Props {
     placeholder?: string;
     clearOnSend?: boolean;
     conversationId?: string;
+    enableInput:boolean;
 }
 
-export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, conversationId }: Props) => {
+export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, conversationId, enableInput }: Props) => {
     const [question, setQuestion] = useState<string>("");
 
     const sendQuestion = () => {
@@ -45,31 +46,56 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, conv
     const sendQuestionDisabled = disabled || !question.trim();
 
     return (
-        <Stack horizontal className={styles.questionInputContainer}>
-            <TextField
-                className={styles.questionInputTextArea}
-                placeholder={placeholder}
-                multiline
-                resizable={false}
-                borderless
-                value={question}
-                onChange={onQuestionChange}
-                onKeyDown={onEnterPress}
-            />
-            <div className={styles.questionInputSendButtonContainer} 
-                role="button" 
-                tabIndex={0}
-                aria-label="Ask question button"
-                onClick={sendQuestion}
-                onKeyDown={e => e.key === "Enter" || e.key === " " ? sendQuestion() : null}
-            >
-                { sendQuestionDisabled ? 
-                    <img src={Send} className={styles.questionInputSendButtonDisabled}/>
-                    :
-                    <img src={Send} className={styles.questionInputSendButton}/>
-                }
-            </div>
-            <div className={styles.questionInputBottomBorder} />
-        </Stack>
+        <div>
+            {
+                enableInput ? (
+                    <div className="d-flex align-items-center justify-content-center gap-2">
+
+                        <TextField
+                            placeholder={placeholder}
+                            className={styles.formControl}
+                            resizable={false}
+                            borderless
+                            value={question}
+                            onChange={onQuestionChange}
+                            onKeyDown={onEnterPress}
+                        />
+ 
+                        <button className={styles.goBtn}
+                            onClick={sendQuestion}
+                            onKeyDown={e => e.key === "Enter" || e.key === " " ? sendQuestion() : null}
+                        >Go</button>
+                    </div >
+                ) : (
+ 
+                    <Stack horizontal className={styles.questionInputContainer}>
+                        <TextField
+                            className={styles.questionInputTextArea}
+                            placeholder={placeholder}
+                            multiline
+                            resizable={false}
+                            borderless
+                            value={question}
+                            onChange={onQuestionChange}
+                            onKeyDown={onEnterPress}
+                        />
+                        <div className={styles.questionInputSendButtonContainer}
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Ask question button"
+                            onClick={sendQuestion}
+                            onKeyDown={e => e.key === "Enter" || e.key === " " ? sendQuestion() : null}
+                        >
+                            {sendQuestionDisabled ?
+                                <img src={Send} className={styles.questionInputSendButtonDisabled} />
+                                :
+                                <img src={Send} className={styles.questionInputSendButton} />
+                            }
+                        </div>
+                        <div className={styles.questionInputBottomBorder} />
+                    </Stack>
+                )}
+        </div>
+ 
     );
 };

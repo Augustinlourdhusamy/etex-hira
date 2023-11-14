@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #FFFFFF 57.29%, #EEF6FE 100%);
+    /* background: radial-gradient(108.78% 108.78% at 50.02% 19.78%, #FFFFFF 57.29%, #EEF6FE 100%); */
     /* background: url("../../assets/etx-background.png") no-repeat ; */
     /* background-size: cover; */
     /* content: ; */
@@ -29,6 +29,8 @@
     border-radius: 26px;
     overflow-y: auto;
     max-height: calc(90vh - 100px);
+    border-radius: 30px;
+    background: #FFF3E5;
 }
 
 .chatEmptyState {
@@ -40,30 +42,44 @@
 }
 
 .chatEmptyStateTitle {
+ 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    /* display: flex; */
+    /* align-items: flex-end; */
+    /* text-align: center; */
+    /* line-height: 24px; */
+    margin-bottom: 0px;
+}
+
+.chatTitleBrand {
+    text-wrap: nowrap;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 45px;
     display: flex;
     align-items: flex-end;
     text-align: center;
-    line-height: 24px;
-    margin-top: 36px;
     margin-bottom: 0px;
     color: #d65501;
 }
 
 .chatEmptyStateSubtitle {
-    margin-top: 40px;
+    margin-top: 50px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     display: flex;
-    align-items: flex-end;
-    text-align: center;
-    letter-spacing: -0.01em;
-    color: #616161;
+    color: #4B4B4B;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 28px;
+    margin-bottom: 80px;
 }
+
+
 
 /* .chatIcon {
     height: 62px;
@@ -90,14 +106,14 @@
 
 .chatMessageUserMessage {
     padding: 20px;
-    background: #EDF5FD;
+    background: #D95E0E;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    color: #242424;
+    color: #fff;
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -331,4 +347,8 @@ a {
 .viewSourceButton:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.input-box {
+    margin-top: 80px;
 }
